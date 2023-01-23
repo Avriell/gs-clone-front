@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Edit = (props) => {
-  let emptyItem = { name: '', age: '' }
+  let emptyItem = { name: '', price: '', image:''}
   const [item, setItem] = useState({...props.item})
 
   const handleChange = (event) => {
@@ -16,7 +16,7 @@ const Edit = (props) => {
   return (
     <>
       <details>
-        <summary>Edit Listing</summary>
+        <summary className="text-white-400 hover:text-white-500 transition duration-300 ease-in-out mb-4">Edit Listing</summary>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name: </label>
           <input

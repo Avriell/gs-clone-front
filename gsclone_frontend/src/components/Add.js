@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 //only need props as a param if we are passing in props to this component (we are going to here).
 const Add = (props) => {
-  let emptyItem = { name: '', age: '' }
+  let emptyItem = { name: '', price: '' }
   const [item, setItem] = useState(emptyItem)
 
 
@@ -24,6 +24,9 @@ const handleSubmit = (event) => {
         <br />
         <label htmlFor="price">Price: </label>
         <input type="number" name="price" value={item.price} onChange={handleChange} />
+        <input type="submit"/>
+        <label htmlFor="image">Image: </label>
+        <input type="text" name="image" value={item.image} onChange={handleChange} />
         <input type="submit"/>
       </form>
     </>
